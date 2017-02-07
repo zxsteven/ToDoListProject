@@ -19,4 +19,8 @@ $("input[type='text'").keypress(function(event){
 		//Create a new li and add to ul
 		$("ul").append("<li><span><i class='fa fa-trash'></span> " + todoText + "</li>");
 	}
-})
+});
+
+$('.fa-sun-o').click(function(){
+	$("input[type='text'").fadeToggle();
+});
