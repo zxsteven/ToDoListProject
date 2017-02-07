@@ -1,7 +1,9 @@
-$('ul').on('click', 'li', function (){
+//Check off specific todos by clicking
+$('ul').on('click', 'li', function(){
 	$(this).toggleClass('completed');
 });
 
+//Click on X to delete todo
 $('ul').on('click', 'span', function(event){
 	$(this).parent().fadeOut(500, function(){
 		$(this).remove();
@@ -11,8 +13,10 @@ $('ul').on('click', 'span', function(event){
 
 $("input[type='text'").keypress(function(event){
 	if(event.which === 13){
+		//Grab new todo from input
 		var todoText = $(this).val();
 		$(this).val('');
-		$('ul').append("<li><span>X</span> " + todoText + "</li>");
+		//Create a new li and add to ul
+		$("ul").append("<li><span>X</span> " + todoText + "</li>");
 	}
-});
+})
